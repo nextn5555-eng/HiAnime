@@ -4,7 +4,30 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>HiAnime</title>
+.anime-card{
+  position:relative;
+  margin:20px;
+  overflow:hidden;
+  border-radius:10px;
+}
 
+.anime-card img{
+  width:100%;
+  display:block;
+}
+
+.overlay{
+  position:absolute;
+  bottom:0;
+  width:100%;
+  background:rgba(0,0,0,0.7);
+  padding:15px;
+}
+
+.overlay h2{
+  color:white;
+  margin:0;
+}
 <style>
 *{
 margin:0;
@@ -192,6 +215,11 @@ background:#111;
 <footer>
 © 2026 HiAnime. All Rights Reserved.
 </footer>
-
+<div class="anime-card">
+  <img src="https://images.unsplash.com/photo-1541560052-77ec1bbc09f7?w=600">
+  <div class="overlay">
+    <h2>Solo Leveling Season 2</h2>
+  </div>
+</div>
 </body>
 </html>
