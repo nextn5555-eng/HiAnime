@@ -14,119 +14,78 @@ font-family:Arial,sans-serif;
 }
 
 body{
-background:#0d0d0d;
+background:#0b0b0f;
 color:white;
 }
 
 header{
-background:#111;
-padding:20px;
+position:fixed;
+top:0;
+width:100%;
+background:rgba(0,0,0,0.8);
+backdrop-filter:blur(10px);
+padding:15px 30px;
 display:flex;
 justify-content:space-between;
 align-items:center;
+z-index:1000;
 }
 
 .logo{
-font-size:30px;
+font-size:28px;
 font-weight:bold;
-color:#ffcc00;
+color:#ffb800;
 }
 
-nav a{
-color:white;
-text-decoration:none;
-margin:0 15px;
+.search{
+padding:10px;
+width:250px;
+border:none;
+border-radius:20px;
 }
 
 .hero{
-height:80vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),
-url('<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>HiAnime</title>
-
-<style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,sans-serif;
-}
-
-body{
-background:#0d0d0d;
-color:white;
-}
-
-header{
-background:#111;
-padding:20px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-}
-
-.logo{
-font-size:30px;
-font-weight:bold;
-color:#ffcc00;
-}
-
-nav a{
-color:white;
-text-decoration:none;
-margin:0 15px;
-}
-
-.hero{
-height:80vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),
+height:100vh;
+background:
+linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.8)),
 url('https://images.unsplash.com/photo-1515879218367-8466d910aaa4');
 background-size:cover;
 background-position:center;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
 }
 
 .hero h1{
-font-size:55px;
+font-size:60px;
 margin-bottom:15px;
 }
 
 .hero p{
-font-size:18px;
 max-width:700px;
+font-size:18px;
 }
 
 .btn{
-display:inline-block;
 margin-top:20px;
-padding:12px 25px;
-background:#ffcc00;
+padding:12px 30px;
+background:#ffb800;
 color:black;
 font-weight:bold;
-border-radius:8px;
 text-decoration:none;
+border-radius:30px;
 }
 
 .section{
-padding:50px 20px;
+padding:60px 20px;
 }
 
 .section h2{
+margin-bottom:25px;
 text-align:center;
-margin-bottom:30px;
 }
 
 .grid{
@@ -136,14 +95,19 @@ gap:20px;
 }
 
 .card{
-background:#1a1a1a;
-border-radius:10px;
+background:#17171f;
+border-radius:12px;
 overflow:hidden;
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
 }
 
 .card img{
 width:100%;
-height:280px;
+height:300px;
 object-fit:cover;
 }
 
@@ -153,10 +117,9 @@ text-align:center;
 }
 
 footer{
-background:#111;
-padding:20px;
 text-align:center;
-margin-top:40px;
+padding:30px;
+background:#111;
 }
 </style>
 </head>
@@ -165,170 +128,69 @@ margin-top:40px;
 
 <header>
 <div class="logo">🎌 HiAnime</div>
-
-<nav>
-<a href="#">Home</a>
-<a href="#">Latest</a>
-<a href="#">Movies</a>
-<a href="#">Popular</a>
-</nav>
+<input class="search" type="text" placeholder="Search Anime...">
 </header>
 
 <section class="hero">
-<h1>Welcome To HiAnime</h1>
-<p>Watch and explore your favorite anime series, movies and latest releases in HD quality.</p>
-<a href="#" class="btn">Explore Anime</a>
+<h1>Welcome to HiAnime</h1>
+<p>Discover trending anime, latest episodes, and your favorite series in one place.</p>
+<a href="#" class="btn">Explore Now</a>
 </section>
 
 <section class="section">
 <h2>🔥 Trending Anime</h2>
 
 <div class="grid">
-
 <div class="card">
-<img src="https://picsum.photos/300/400?1">
+<img src="https://picsum.photos/400/600?1">
 <h3>Solo Leveling</h3>
 </div>
 
 <div class="card">
-<img src="https://picsum.photos/300/400?2">
-<h3>Demon Slayer</h3>
-</div>
-
-<div class="card">
-<img src="https://picsum.photos/300/400?3">
+<img src="https://picsum.photos/400/600?2">
 <h3>One Piece</h3>
 </div>
 
 <div class="card">
-<img src="https://picsum.photos/300/400?4">
+<img src="https://picsum.photos/400/600?3">
+<h3>Demon Slayer</h3>
+</div>
+
+<div class="card">
+<img src="https://picsum.photos/400/600?4">
 <h3>Jujutsu Kaisen</h3>
 </div>
-
 </div>
-</section>
-
-<footer>
-© 2026 HiAnime | All Rights Reserved
-</footer>
-
-</body>
-</html>');
-background-size:cover;
-background-position:center;
-}
-
-.hero h1{
-font-size:55px;
-margin-bottom:15px;
-}
-
-.hero p{
-font-size:18px;
-max-width:700px;
-}
-
-.btn{
-display:inline-block;
-margin-top:20px;
-padding:12px 25px;
-background:#ffcc00;
-color:black;
-font-weight:bold;
-border-radius:8px;
-text-decoration:none;
-}
-
-.section{
-padding:50px 20px;
-}
-
-.section h2{
-text-align:center;
-margin-bottom:30px;
-}
-
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:20px;
-}
-
-.card{
-background:#1a1a1a;
-border-radius:10px;
-overflow:hidden;
-}
-
-.card img{
-width:100%;
-height:280px;
-object-fit:cover;
-}
-
-.card h3{
-padding:15px;
-text-align:center;
-}
-
-footer{
-background:#111;
-padding:20px;
-text-align:center;
-margin-top:40px;
-}
-</style>
-</head>
-
-<body>
-
-<header>
-<div class="logo">🎌 HiAnime</div>
-
-<nav>
-<a href="#">Home</a>
-<a href="#">Latest</a>
-<a href="#">Movies</a>
-<a href="#">Popular</a>
-</nav>
-</header>
-
-<section class="hero">
-<h1>Welcome To HiAnime</h1>
-<p>Watch and explore your favorite anime series, movies and latest releases in HD quality.</p>
-<a href="#" class="btn">Explore Anime</a>
 </section>
 
 <section class="section">
-<h2>🔥 Trending Anime</h2>
+<h2>⭐ Popular Anime</h2>
 
 <div class="grid">
-
 <div class="card">
-<img src="https://picsum.photos/300/400?1">
-<h3>Solo Leveling</h3>
+<img src="https://picsum.photos/400/600?5">
+<h3>Naruto</h3>
 </div>
 
 <div class="card">
-<img src="https://picsum.photos/300/400?2">
-<h3>Demon Slayer</h3>
+<img src="https://picsum.photos/400/600?6">
+<h3>Bleach</h3>
 </div>
 
 <div class="card">
-<img src="https://picsum.photos/300/400?3">
-<h3>One Piece</h3>
+<img src="https://picsum.photos/400/600?7">
+<h3>Attack on Titan</h3>
 </div>
 
 <div class="card">
-<img src="https://picsum.photos/300/400?4">
-<h3>Jujutsu Kaisen</h3>
+<img src="https://picsum.photos/400/600?8">
+<h3>Chainsaw Man</h3>
 </div>
-
 </div>
 </section>
 
 <footer>
-© 2026 HiAnime | All Rights Reserved
+© 2026 HiAnime. All Rights Reserved.
 </footer>
 
 </body>
